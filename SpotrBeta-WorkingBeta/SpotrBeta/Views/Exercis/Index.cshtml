@@ -1,0 +1,58 @@
+﻿@model IEnumerable<SpotrBeta.Models.Exercis>
+
+@{
+    ViewBag.Title = "Exercise page";
+    var prevWorkout = "";
+    var currentWorkout = "";
+}
+
+<h1>View your exercises:</h1>
+<br/>
+    @foreach (var item in Model)
+    {
+        <h6>
+            @{
+                currentWorkout = item.Workout.Name;
+            }
+                <!--Makes sure Workout name does not appear twice-->
+            @if (currentWorkout != prevWorkout)
+            {
+                
+                    @Html.DisplayFor(modelItem => item.Workout.Name)
+                
+            }
+        </h6>
+       if (currentWorkout != prevWorkout)
+        {
+            <div style="border-top:5px solid red;" />
+        }
+
+          <h4 class="item">@Html.DisplayFor(modelItem => item.Name)</h4>
+         <p><b>Desc: </b>@Html.DisplayFor(modelItem => item.Description)</p>
+          <p class="badge">@Html.DisplayFor(modelItem => item.NumReps) reps</p>
+           <p class="badge">Rest for @Html.DisplayFor(modelItem => item.RestTime) mins</p>
+             <p class="badge">@Html.DisplayFor(modelItem => item.Weight) lbs.</p>
+            <p>@Html.ActionLink("Update", "Edit", new { id = item.Id }) or
+               @Html.ActionLink("Remove", "Delete", new { id = item.Id }) this exercise</p>
+
+               
+               /*
+                if (currentWorkout == prevWorkout)
+                {
+                    <div style="border-top:2px solid red;" />
+
+                }
+                else
+                {
+                    <div style="border-top:1px solid red;" />
+                }*/
+                    prevWorkout = item.Workout.Name;
+
+            
+                }
+<br />    
+
+
+
+<br/>
+      <h4 class="well-sm">@Html.ActionLink("Add another exercise", "Create", "Exercis") <span class="glyphicon glyphicon-arrow-right"></span> </h4>

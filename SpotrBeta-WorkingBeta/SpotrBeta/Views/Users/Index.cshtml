@@ -1,0 +1,124 @@
+﻿@model SpotrBeta.Models.User
+
+@{
+    ViewBag.Title = "My Profile";
+    var weight = ViewBag.Weight;
+    var height = ViewBag.Height;
+    var bmi = (weight / height) / height;
+}
+
+<h1>My Profile.</h1>
+
+@if (User.Identity.IsAuthenticated)
+{
+    <h2>
+    @Html.ActionLink("Edit", "Edit", new { id = ViewBag.CurrentUserId }) your profile?</h2>
+
+    if (weight != null && height != null)
+    {
+        int val = weight / (int)height;
+        int fVal = val / (int)height;
+        <section class="text-danger"><span class="glyphicon glyphicon-heart"></span><b> Your Body Mass Index(BMI) is: </b>@Html.DisplayName(fVal.ToString())</section>
+    }
+
+<dl class="dl-horizontal">
+    <dt>
+       First Name
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.FirstName)
+    </dd>
+
+    <dt>
+       Last Name
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.LastName)
+    </dd>
+
+    <dt>
+        @Html.DisplayNameFor(model => model.Email)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.Email)
+    </dd>
+
+    <dt>
+        @Html.DisplayNameFor(model => model.Age)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.Age)
+    </dd>
+
+    <dt>
+        @Html.DisplayNameFor(model => model.Weight)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.Weight)
+    </dd>
+
+    <dt>
+       Goal Weight
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.GoalWeight)
+    </dd>
+
+    <dt>
+        @Html.DisplayNameFor(model => model.Height)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.Height)
+    </dd>
+
+    <dt>
+        @Html.DisplayNameFor(model => model.Country)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.Country)
+    </dd>
+
+    <dt>
+        Skill Level
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.SkillLevel)
+    </dd>
+<!--<dt>
+       Apply to be a Trainer
+    </dt>
+
+    <dd>
+        @*Html.DisplayFor(model => model.IsTrainer)*@
+    </dd>-->
+    
+
+    <dt>
+        @Html.DisplayNameFor(model => model.Specialty)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.Specialty)
+    </dd>
+
+ 
+</dl>
+
+
+
+}
+else
+{
+    <h4>Please log in first to view your profile.</h4>
+    <div class="alert">@Html.Partial("_LoginPartial")</div>
+
+}

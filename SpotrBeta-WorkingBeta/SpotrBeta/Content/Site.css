@@ -1,0 +1,161 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    font-family: 'Segoe UI', Helvetica, sans-serif;
+    background-color: #d1d1d1;
+}
+
+.form-control{
+    border-color:crimson;  
+    border-radius: 0 !important;
+    background-color:#ffecd4;
+}
+input{
+    color:#FFFFFF;
+    background-color:#bb0000;
+}
+
+ .btn btn-info{
+      border-radius:50px;
+      color:red;
+      stroke:darkorchid;
+      background-color:lightgrey;
+ }
+
+  
+.form-group{
+    border-radius:50%;
+
+}
+
+
+h6{
+    color:#101010;
+    font-family:'Microsoft YaHei UI';
+    font-size:large;
+}
+
+dt{
+    color:#960000;
+}
+
+h4{
+    color:crimson;    
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.table{
+    font-family:Arial, Helvetica, sans-serif;
+    border-spacing:10px;
+    border:thin;
+    font-size:large;
+}
+
+input.btn-group-justified{
+    box-shadow:none;
+    text-shadow:none;
+    border-radius:10px;
+    font-family:'Lao UI';
+    color:#FFFFFF;
+    background-color:#890000;
+}
+
+input.btn-group-justified pill-content{
+    background-color:#fcc7d1;
+    color:aqua;
+    background-color:blueviolet;
+}
+
+form-group col-lg-offset-1 well-sm{
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+
+
+label control-label col-md-2{
+    color:red;
+}
+
+i{
+    color:crimson;
+}
+
+
+
+
+a:link  {
+   color:#000000;
+   background-color:rgba(174, 174, 174, 0.87);
+ 
+}
+a:visited{
+    color:crimson;
+}
+
+.nav .navbar-nav{
+    color:#101010;
+}
+h1{ 
+    font-family:Exo;
+    color:#383737;
+}
+
+h2 {
+    font-family: 'Lao UI'
+}
+
+img {
+    padding-top:0px;
+}
+
+.nav{
+    width:100%;
+  
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+
+.nav.navbar-nav li a {
+    font-size:14px;
+    color:white;
+ 
+   font-family: 'Raleway', Helvetica, Arial, sans-serif;
+	font-size: 20px;
+	line-height: 30px;
+    text-emphasis-style:filled;
+    font-weight:bolder;
+    background-color:#bb0000;
+
+
+ }
+
+
+.jumbotron {
+    position: relative;
+}
+
+  .carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 50%;
+      margin: auto;
+  }
+
